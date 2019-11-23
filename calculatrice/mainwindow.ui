@@ -287,7 +287,23 @@
      <string>Calculate</string>
     </property>
     <property name="shortcut">
-     <string>Return</string>
+     <string>CapsLock, CapsLock</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_comma">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>180</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>.</string>
+    </property>
+    <property name="shortcut">
+     <string>.</string>
     </property>
    </widget>
   </widget>
