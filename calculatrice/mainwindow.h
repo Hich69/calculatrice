@@ -39,6 +39,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
+    bool m_comma;
+
     QString m_result;
     QList<QString> *m_result_temp;
 };
