@@ -4,7 +4,11 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    m_comma(false)
+    m_comma(false),
+    m_plus(false),
+    m_moins(false),
+    m_fois(false),
+    m_divise(false)
 {
     ui->setupUi(this);
 
@@ -24,6 +28,11 @@ void MainWindow::showResult()
         m_result.append(w);
     }
     ui->textBrowser->setText(m_result);
+}
+
+void MainWindow::initializeBool()
+{
+    m_comma = false; m_plus = false; m_moins = false; m_fois = false; m_divise = false;
 }
 
 void MainWindow::on_pushButton_0_clicked()
@@ -120,6 +129,7 @@ void MainWindow::on_pushButton_clean_clicked()
 {
     ui->textBrowser->clear();
     m_result_temp = new QList<QString>;
+    initializeBool();
 }
 
 void MainWindow::on_pushButton_calculate_clicked()
@@ -129,5 +139,15 @@ void MainWindow::on_pushButton_calculate_clicked()
 
 void MainWindow::on_pushButton_comma_clicked()
 {
-    m_result_temp->push_back(".");
+    if(!m_comma)
+    {
+        if(m_result_temp->length() == 0)
+        {
+            m_result_temp->push_back("0");
+        }
+        m_result_temp->push_back(".");
+    }
+    ui->textBrowser->clear();
+    showResult();
+    m_comma = true;
 }

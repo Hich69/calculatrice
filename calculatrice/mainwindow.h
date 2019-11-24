@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void showResult();
+    void initializeBool();
 
 private slots:
     void on_pushButton_0_clicked();
@@ -39,7 +40,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    bool m_comma;
+    bool m_comma, m_plus, m_moins, m_fois, m_divise;
 
     QString m_result;
     QList<QString> *m_result_temp;
