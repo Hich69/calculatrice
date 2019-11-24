@@ -43,7 +43,10 @@ private:
     bool m_comma, m_plus, m_moins, m_fois, m_divise;
 
     QString m_result;
-    QList<QString> *m_result_temp;
+    QString value;
+    QVector<QString> valueVect;
+    QString ope;
+    QVector<QString> opeVect;
 };
 
 #endif // MAINWINDOW_H

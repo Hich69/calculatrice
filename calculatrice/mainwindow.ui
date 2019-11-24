@@ -2,16 +2,22 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
+    <width>373</width>
     <height>321</height>
    </rect>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Calculatrice</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="pushButton_0">
@@ -174,70 +180,6 @@
      <string>9</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_plus">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>60</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>+</string>
-    </property>
-    <property name="shortcut">
-     <string>+</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_moins">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>60</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>-</string>
-    </property>
-    <property name="shortcut">
-     <string>-</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_divise">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>100</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>/</string>
-    </property>
-    <property name="shortcut">
-     <string>/</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_fois">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>100</y>
-      <width>41</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>*</string>
-    </property>
-    <property name="shortcut">
-     <string>*</string>
-    </property>
-   </widget>
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
@@ -306,13 +248,77 @@
      <string>.</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_plus">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>60</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <property name="shortcut">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_moins">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>60</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+    <property name="shortcut">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_fois">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>100</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>*</string>
+    </property>
+    <property name="shortcut">
+     <string>*</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_divise">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>100</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+    <property name="shortcut">
+     <string>/</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>375</width>
+     <width>373</width>
      <height>26</height>
     </rect>
    </property>

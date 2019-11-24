@@ -11,8 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
     m_divise(false)
 {
     ui->setupUi(this);
-
-    m_result_temp = new QList<QString>;
 }
 
 MainWindow::~MainWindow()
@@ -23,11 +21,7 @@ MainWindow::~MainWindow()
 void MainWindow::showResult()
 {
     m_result.clear();
-    for(QString w : *m_result_temp)
-    {
-        m_result.append(w);
-    }
-    ui->textBrowser->setText(m_result);
+    ui->textBrowser->setText(value);
 }
 
 void MainWindow::initializeBool()
@@ -37,98 +31,114 @@ void MainWindow::initializeBool()
 
 void MainWindow::on_pushButton_0_clicked()
 {
-    m_result_temp->push_back("0");
+    value.append("0");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    m_result_temp->push_back("1");
+    value.append("1");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    m_result_temp->push_back("2");
+    value.append("2");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    m_result_temp->push_back("3");
+    value.append("3");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    m_result_temp->push_back("4");
+    value.append("4");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    m_result_temp->push_back("5");
+    value.append("5");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    m_result_temp->push_back("6");
+    value.append("6");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    m_result_temp->push_back("7");
+    value.append("7");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    m_result_temp->push_back("8");
+    value.append("8");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    m_result_temp->push_back("9");
+    value.append("9");
     ui->textBrowser->clear();
     showResult();
 }
 
 void MainWindow::on_pushButton_plus_clicked()
 {
-
+    ope = "+";
+    ui->textBrowser->clear();
+    opeVect.push_back(ope);
+    value.append(" + ");
+    showResult();
 }
 
 void MainWindow::on_pushButton_moins_clicked()
 {
-
+    ope = "-";
+    ui->textBrowser->clear();
+    opeVect.push_back(ope);
+    value.append(" - ");
+    showResult();
 }
 
 void MainWindow::on_pushButton_fois_clicked()
 {
-
+    ope = "*";
+    ui->textBrowser->clear();
+    opeVect.push_back(ope);
+    value.append(" * ");
+    showResult();
 }
 
 void MainWindow::on_pushButton_divise_clicked()
 {
-
+    ope = "/";
+    ui->textBrowser->clear();
+    opeVect.push_back(ope);
+    value.append(" / ");
+    showResult();
 }
 
 void MainWindow::on_pushButton_clean_clicked()
 {
     ui->textBrowser->clear();
-    m_result_temp = new QList<QString>;
+    value.clear();
     initializeBool();
 }
 
@@ -141,11 +151,11 @@ void MainWindow::on_pushButton_comma_clicked()
 {
     if(!m_comma)
     {
-        if(m_result_temp->length() == 0)
+        if(value.length() == 0)
         {
-            m_result_temp->push_back("0");
+            value.push_back("0");
         }
-        m_result_temp->push_back(".");
+        value.push_back(".");
     }
     ui->textBrowser->clear();
     showResult();
